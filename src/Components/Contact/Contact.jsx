@@ -15,7 +15,7 @@ const Contact = () => {
         method: "POST",
         url:"https://gmail-system.vercel.app/api/send",
         body: JSON.stringify({ from, subject, message }),
-        headers: {'Content-Type': 'application/json',}
+        headers: {'Content-Type': 'application/json'}
       });
       if (response.ok) {
         alert('Email sent successfully!');
