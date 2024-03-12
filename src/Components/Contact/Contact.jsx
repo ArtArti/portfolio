@@ -14,10 +14,8 @@ const Contact = () => {
     const response = await axios({
         method: "POST",
         url:"https://gmail-system.vercel.app/api/send",
-        withCredentials: true,
         body: JSON.stringify({ from, subject, message }),
-        headers: {'Content-Type': 'application/json',},
-        data: credentials
+        headers: {'Content-Type': 'application/json',}
       });
       if (response.ok) {
         alert('Email sent successfully!');
