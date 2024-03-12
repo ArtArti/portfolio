@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import logo from "./../../assets/logo/logo.svg";
 import SidebarMenu from "./SidebarMenu";
 import ThemeChanger from "./ThemeChanger";
-
+import resume from './../../assets/resume.pdf'
 export default function Navbar() {
   const { t, i18n } = useTranslation("");
   const switchLanguage = (newLanguage) => {
@@ -20,6 +20,15 @@ export default function Navbar() {
     { code: "ka", label: "ಕನ್ನಡ" },
   ];
 
+const handleDownloadPDF = () => {
+    const anchor = document.createElement('a');
+    anchor.href = resume; 
+    anchor.download = 'resume.pdf'; 
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
+  
   return (
     <header className=" sticky z-50 top-0">
       <nav className="px-4 lg:px-6 py-2.5">
@@ -71,12 +80,12 @@ export default function Navbar() {
                 })}
               </ul>
             </div>
-            <Link
-              to="#"
+            <button
+              onClick={handleDownloadPDF}
               className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Download
-            </Link>
+            </button>
           </div>
           <div
             className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
