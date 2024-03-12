@@ -13,7 +13,7 @@ const Contact = () => {
     try {
     const response = await axios({
         method: "POST",
-        url:"https://gmail-system-five.vercel.app/api/send",
+        url:"https://gmail-system.vercel.app/api/send",
         withCredentials: true,
         body: JSON.stringify({ from, subject, message }),
         headers: {'Content-Type': 'application/json',},
