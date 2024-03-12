@@ -11,7 +11,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8081/api/send', {
+      const response = await fetch('https://gmail-system.vercel.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
