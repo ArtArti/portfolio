@@ -1,0 +1,13 @@
+:root {
+  /* Colours */
+  --color-secondary: linear-gradient(to right, #8b5cf6, #e64980);
+  /* --color-dark: #0b2447; */
+  --color-bg: #04152d;
+
+  /* Fonts */
+  --font-roboto: "Roboto";
+}
+
+[data-theme="dark"] .homelogo {
+  color: aliceblue;
+}
