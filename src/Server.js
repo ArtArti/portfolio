@@ -1,52 +1,54 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
+const express = require('express');
+const cors = require('cors'); // Import the cors package
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
-// server used to send send emails
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+app.use(bodyParser.json());
 
-const contactEmail = nodemailer.createTransport({
+// Use the CORS middleware
+app.use(
+  cors({
+    origin: "https://portfolio-henna-seven-79.vercel.app", 
+    methods: ['POST'], 
+    credentials: true,
+  })
+)
+
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "********@gmail.com",
-    pass: ""
+    user:process.env.SMTP_USERNAME,// Using environment variables
+    pass: process.env.SMTP_PASSWORD, // Using environment variables
   },
 });
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
+app.post('/api/send', async (req, res) => {
+  const { from, subject, message } = req.body;
+
+  try {
+    await transporter.sendMail({
+      from: from, // Use the 'from' field from the form data
+      to: process.env.SMTP_USERNAME, // Using environment variables
+      subject: `New Contact Form Submission: ${subject}`,
+      text: `From: ${from}\n\n${message}`,
+    });
+    res.sendStatus(200);
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.sendStatus(500);
   }
 });
 
-router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
-  const mail = {
-    from: name,
-    to: "********@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
-  });
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
+
+
+
+
+
+
