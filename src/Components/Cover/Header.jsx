@@ -1,7 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import {Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import resume from './../../assets/resume.pdf'
 import about from './../../assets/about/about.jpeg'

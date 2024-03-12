@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AnimatedNumber from 'react-animated-number';
+import AnimatedNumbers from "react-animated-numbers";
 
 const achievementsList = [
   {
@@ -30,11 +30,11 @@ const Count = () => {
     }
 
     // Attach scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Remove scroll event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -48,19 +48,18 @@ const Count = () => {
           >
             <h2 className=" text-4xl font-bold flex flex-row">
               {achievement.prefix && `${achievement.prefix}`}
-              <AnimatedNumber
-                value={parseInt(achievement.value)}
-                duration={1000}
-                fontStyle={{ color: "white", fontSize: "4xl", fontWeight: "bold" }}
-                // formatValue={(val) => `${val}${achievement.postfix || ''}`}
-                
-                style={{
-                transition: '0.8s ease-out',
-                fontSize: 48,
-                transitionProperty:
-                    'background-color, color, opacity',    
-            }}
-              />   
+              <AnimatedNumbers
+                includeComma
+                transitions={(index) => ({
+                  type: "spring",
+                  duration: index + 1,
+                })}
+                animateToNumber={parseInt(achievement.value)}
+                fontStyle={{
+                  fontSize: "4xl",
+                  fontWeight: "bold",
+                }}
+              />
             </h2>
             <p className=" text-base">{achievement.metric}</p>
           </div>
