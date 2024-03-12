@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const Contact = () => {
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
@@ -11,12 +11,13 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     const response = await fetch('https://gmail-system.vercel.app/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+    const response = await axios({
+        method: "POST",
+        url:"https://gmail-system-five.vercel.app/api/send",
+        withCredentials: true,
         body: JSON.stringify({ from, subject, message }),
+        headers: {'Content-Type': 'application/json',},
+        data: credentials
       });
       if (response.ok) {
         alert('Email sent successfully!');
