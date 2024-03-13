@@ -11,21 +11,13 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "https://gmail-system.vercel.app/api/send",
-        {
-          from: from,
-          subject: subject,
-          message: message
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      if (response.status === 200) {
+      const response = await axios({
+        method: "POST",
+        url:"https://gmail-system.vercel.app/api/send",
+        body: JSON.stringify({ from, subject, message }),
+        headers: {'Content-Type': 'application/json',},
+      });
+      if (response.ok) {
         alert('Email sent successfully!');
         setFrom('');
         setSubject('');
