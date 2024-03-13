@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 const Contact = () => {
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
@@ -11,13 +11,21 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios({
-        method: "POST",
-        url:"https://gmail-system.vercel.app/api/send",
-        body: JSON.stringify({ from, subject, message }),
-        headers: {'Content-Type': 'application/json',},
-      });
-      if (response.ok) {
+      const response = await axios.post(
+        "https://gmail-system.vercel.app/api/send",
+        {
+          from: from,
+          subject: subject,
+          message: message
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.status === 200) {
         alert('Email sent successfully!');
         setFrom('');
         setSubject('');
@@ -30,6 +38,7 @@ const Contact = () => {
       alert('Failed to send email.');
     }
   };
+
   return (
     <section
       id="contact"
