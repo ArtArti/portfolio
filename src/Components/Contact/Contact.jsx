@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const Contact = () => {
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
