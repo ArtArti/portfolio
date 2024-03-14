@@ -31,7 +31,7 @@ const projectsData = [
     image: "/portfolio.png",
     tag: ["All", "Frontend","Backend"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://portfolio-eta-topaz-86.vercel.app/",
   },
   {
     id: 4,
