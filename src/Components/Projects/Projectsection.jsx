@@ -33,15 +33,6 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "https://portfolio-eta-topaz-86.vercel.app/",
   },
-  {
-    id: 4,
-    title: "React News App",
-    description: "Project 3 description",
-    image: "/project/news.png",
-    tag: ["All", "Frontend"],
-    gitUrl: "/",
-    previewUrl: "https://daily-buzz.vercel.app/",
-  },
 ];
 
 const ProjectsSection = () => {
