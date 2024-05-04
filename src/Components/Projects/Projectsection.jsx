@@ -31,6 +31,7 @@ const projectsData = [
     tag: ["All", "Frontend","Backend"],
     gitUrl: "/",
     previewUrl: "https://portfolio-eta-topaz-86.vercel.app/",
+<<<<<<< HEAD
   },
   {
     id: 4,
@@ -40,6 +41,8 @@ const projectsData = [
     tag: ["All", "Frontend"],
     gitUrl: "/",
     previewUrl: "https://daily-buzz.vercel.app/",
+=======
+>>>>>>> 2e5c797ed25fd3b1509be0fccfa7d5810a4fa86c
   },
 ];
 
