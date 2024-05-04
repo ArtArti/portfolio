@@ -3,9 +3,9 @@ import styles from './certificate.module.css';
 import webd from './../../assets/certificate/webd.png';
 import oci from './../../assets/certificate/oci.png';
 import iot from './../../assets/certificate/iot.png';
-
+import { useTranslation } from 'react-i18next';
 const Certificate = () => {
-
+  const {t} = useTranslation();
   const handleImageClick = (image) => {
     setSelectedImage(image);
     setShowModal(true);
@@ -14,7 +14,7 @@ const Certificate = () => {
   return (
     <section id="education" className=' mt-32'>
     <div className={styles.container1}>
-      <h2 className={styles.title}>Education & Certification</h2>
+      <h2 className={styles.title}>{t('education.education')}</h2>
       <div className={styles.content}>
         <div className="carousel h-96 rounded-box" style={{ width: "80%"}}>
           <div id="s1" className="carousel-item relative w-full">

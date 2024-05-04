@@ -15,9 +15,9 @@ export default function Navbar() {
   const languages = [
     { code: "en", label: "English" },
     { code: "hi", label: "हिंदी" },
-    { code: "fr", label: "française" },
-    { code: "pn", label: "ਪੰਜਾਬੀ" },
-    { code: "ka", label: "ಕನ್ನಡ" },
+    // { code: "fr", label: "française" },
+    // { code: "pn", label: "ਪੰਜਾਬੀ" },
+    { code: "kn", label: "ಕನ್ನಡ" },
   ];
 
 const handleDownloadPDF = () => {

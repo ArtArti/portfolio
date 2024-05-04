@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from './../assets/logo/logo.svg'
+import { useTranslation } from 'react-i18next';
 export default function Footer() {
 const currentYear = new Date().getFullYear();
-
+const {t} = useTranslation();
     return (
         <footer className=" bg-slate-200 border-y">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -22,22 +23,22 @@ const currentYear = new Date().getFullYear();
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li>
-                                 <a href="#home" className="hover:underline">Home</a>
+                                 <a href="#home" className="hover:underline">{t('header.home')}</a>
                                 </li>
                                 <li><a href="#about" className="hover:underline">
-                                 About</a>
+                                {t('header.about')}</a>
                                 </li>
                                 <li><a href="#experience" className="hover:underline">
-                                 Experience</a>
+                                {t('header.experience')}</a>
                                 </li>
                                 <li><a href="#project" className="hover:underline">
-                                 Projects</a>
+                                {t('header.education')}</a>
                                 </li>
                                 <li><a href="#education" className="hover:underline">
-                                 Education</a>
+                                {t('header.project')}</a>
                                 </li>
                                 <li><a href="#contact" className="hover:underline">
-                                 Contact</a>
+                                {t('header.contact')}</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,12 +52,12 @@ const currentYear = new Date().getFullYear();
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        Github
+                                       {t('header.git')}
                                     </a>
                                 </li>
                                 <li>
                                     <Link to="/" className="hover:underline">
-                                       LinkedIn
+                                    {t('header.linkedin')}
                                     </Link>
                                 </li>
                             </ul>

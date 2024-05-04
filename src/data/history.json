@@ -12,8 +12,7 @@
     "organisation": "Bizitech Fintech Pvt. Ltd",
     "startDate": "Jan, 2023",
     "endDate": "April, 2023",
-    "experiences": ["Designed the Landing and Admin Page",
-    "Integration of complete app"],
+    "experiences": ["Designed the Landing and Admin Page","Integration of complete app"],
     "imageSrc": "logo/tech.png"
   },
   {
@@ -21,9 +20,7 @@
     "organisation": "Techprolabz: Schools of Robotics",
     "startDate": "Apr, 2020",
     "endDate": "Jun, 2020",
-    "experiences": [
-      "Built a websites to uplifts the grocery shops"
-    ],
+    "experiences": ["Built a websites to uplifts the grocery shops"],
     "imageSrc": "history/netflix.png"
   }
 ]

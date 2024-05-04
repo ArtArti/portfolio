@@ -3,11 +3,12 @@ import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 const Contact = () => {
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-
+  const {t} = useTranslation();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -46,11 +47,9 @@ const Contact = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className=" text-xl font-bold  my-2">Let&apos;s Connect</h5>
+        <h5 className=" text-xl font-bold  my-2">{t('contact.lets')}</h5>
         <p className=" mb-4 max-w-md text-lg font-serif ">
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+         {t('contact.des')}
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com" className=" text-5xl">
@@ -72,7 +71,7 @@ const Contact = () => {
               htmlFor="email"
               className="block mb-2 text-sm font-medium"
             >
-              Your email
+              {t('contact.email')}
             </label>
             <input
               name="email"
@@ -90,7 +89,7 @@ const Contact = () => {
             <label
               htmlFor="subject"
               className="block text-sm mb-2 font-medium">
-              Subject
+              {t('contact.sub')}
             </label>
             <input
               name="subject"
@@ -109,7 +108,7 @@ const Contact = () => {
               htmlFor="message"
               className="block text-sm mb-2 font-medium"
             >
-              Message
+              {t('contact.msg')}
             </label>
             <textarea
               name="message"
@@ -124,7 +123,7 @@ const Contact = () => {
           <button
             type="submit"
             className="bg-red-400 hover:bg-gradient-to-br from-purple-500 to-pink-600 font-medium py-2.5 px-5 rounded-lg w-full">
-            Send Message
+            {t('contact.submit')}
           </button>
         </form>
       </div>

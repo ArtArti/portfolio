@@ -2,13 +2,14 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { t } from "i18next";
+import { useTranslation} from "react-i18next";
 const projectsData = [
   {
     id: 1,
     title: "React gallery App",
     description: "Project 1 description",
     image: "/project/art.png",
-    image: "/art.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
     previewUrl: "https://art-gallery-kappa-flax.vercel.app/",
@@ -18,7 +19,6 @@ const projectsData = [
     title: "Notes Planner Website",
     description: "Project 2 description",
     image: "/project/notes.png",
-    image: "/notes.png",
     tag: ["All", "Backend"],
     gitUrl: "/",
     previewUrl: "https://note-planner-client.vercel.app/",
@@ -28,10 +28,9 @@ const projectsData = [
     title: "React Portfolio App",
     description: "Project 3 description",
     image: "/project/portfolio.png",
-    image: "/portfolio.png",
     tag: ["All", "Frontend","Backend"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://portfolio-eta-topaz-86.vercel.app/",
   },
   {
     id: 4,
@@ -45,9 +44,11 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
+
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const {t} = useTranslation();
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -65,7 +66,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className=" ml-2 mr-2 mt-48 mb-20">
       <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
-        My Projects
+        {t('project.project')}
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag

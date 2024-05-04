@@ -1,11 +1,15 @@
-{
+{   "education":{
+     "education":"EDUCTAION & CERTIFICATION"
+},
     "header" :{
       "home" : "Home",
       "project": "Project",
       "experience" : "Experience",
       "contact": "Contact",
       "education" : "Education",
-      "about" : "About"
+      "about" : "About",
+      "git":"GitHub",
+      "linkedin":"linkedIn"
     },
     "cover":{
       "hello":"Hello I'm",
@@ -20,5 +24,48 @@
       "des2":"I have experience developing fast and optimised back-end systems and APIs",
       "ui":"UI Designer",
       "des3":" I have designed multiple landing pages and have created design systems as well"
+    },
+    "history":[
+      {
+        "role": "Software Engineer",
+        "organisation": "Manas Networks",
+        "startDate": "Nov, 2023",
+        "endDate": "Present",
+        "experiences": ["Worked on tracking app", "handling migration from older version"],
+        "imageSrc": "logo/manas.png"
+      },
+      {
+        "role": "Web Developer Intern",
+        "organisation": "Bizitech Fintech Pvt. Ltd",
+        "startDate": "Jan, 2023",
+        "endDate": "April, 2023",
+        "experiences": ["Designed the Landing and Admin Page","Integration of complete app"],
+        "imageSrc": "logo/tech.png"
+      },
+      {
+        "role": "Web Developer Intern",
+        "organisation": "Techprolabz: Schools of Robotics",
+        "startDate": "Apr, 2020",
+        "endDate": "Jun, 2020",
+        "experiences": ["Built a websites to uplifts the grocery shops"],
+        "imageSrc": "history/netflix.png"
+      }
+    ],
+    "contact":{
+      "lets":"Lets Connect",
+      "des":" I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+      "email":"Your Email",
+      "sub": "Subject",
+      "msg":"Message",
+      "submit":"Send Message"
+    },
+    "project":{
+      "project":"MY PROJECTS",
+      "all":"All",
+      "fontend":"FrontEnd",
+      "backend":"Backend"
+    },
+    "exp":{
+      "experience":"EXPERIENCE" 
     }
 }
