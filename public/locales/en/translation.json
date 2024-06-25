@@ -10,7 +10,8 @@
       "about" : "About",
       "git":"GitHub",
       "linkedin":"linkedIn",
-      "certification":"Certificate"
+      "certification":"Certificate",
+      "thank" : "THANK YOU"
     },
     "cover":{
       "hello":"Hello I'm",
