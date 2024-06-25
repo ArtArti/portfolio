@@ -15,11 +15,10 @@ export default function Navbar() {
   const languages = [
     { code: "en", label: "English" },
     { code: "hi", label: "हिंदी" },
-    // { code: "fr", label: "française" },
-    // { code: "pn", label: "ਪੰਜਾਬੀ" },
     { code: "kn", label: "ಕನ್ನಡ" },
   ];
 
+  // pdf dowload
 const handleDownloadPDF = () => {
     const anchor = document.createElement('a');
     anchor.href = resume; 
@@ -34,7 +33,7 @@ const handleDownloadPDF = () => {
       <nav className="px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="#" className="flex items-center">
-            <img src={logo} className="homelogo mr-3 h-12" alt="Logo" />
+            <img src={logo} className="homelogo mr-3 h-12 " alt="Logo" />
           </Link>
           <label
             htmlFor="my-drawer-2"
@@ -120,6 +119,14 @@ const handleDownloadPDF = () => {
                   className="block py-2 pr-4 pl-3 border-white hover:bg-gray-50 lg:hover:bg-transparent  hover:text-orange-700 lg:p-0"
                 >
                   {t("header.experience")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#certification"
+                  className="block py-2 pr-4 pl-3 border-white hover:bg-gray-50 lg:hover:bg-transparent  hover:text-orange-700 lg:p-0"
+                >
+                  {t("header.certification")}
                 </a>
               </li>
               <li>

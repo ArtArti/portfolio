@@ -49,8 +49,7 @@ const Header = () => {
 
           </h1>
           <p className="text-base sm:text-lg mb-6 lg:text-xl">
-          I'm a full-stack developer with 1 years of professional experience using React and
-          NodeJS. Reach out if you'd like to learn more!
+          {t('cover.intro')}
           </p>
           <div>
             <a

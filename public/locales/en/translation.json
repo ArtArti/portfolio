@@ -1,5 +1,5 @@
-{   "education":{
-     "education":"EDUCTAION & CERTIFICATION"
+{   "certificate":{
+     "certificate":"CERTIFICATION"
 },
     "header" :{
       "home" : "Home",
@@ -9,13 +9,15 @@
       "education" : "Education",
       "about" : "About",
       "git":"GitHub",
-      "linkedin":"linkedIn"
+      "linkedin":"linkedIn",
+      "certification":"Certificate"
     },
     "cover":{
       "hello":"Hello I'm",
        "name":"Arti",
        "connect":"Connect",
-       "cv":" Resume"
+       "cv":" Resume",
+       "intro": " I'm a full-stack developer with 1 years of professional experience using React and NodeJS. Reach out if you'd like to learn more!"
     },
     "about":{
       "frontend":"Frontend Developer",
@@ -67,5 +69,27 @@
     },
     "exp":{
       "experience":"EXPERIENCE" 
-    }
+    },
+    "education" : [
+      {
+        "course" : "MASTER IN COMPUTER APPLICATION",
+        "college" : "Patna Women's College",
+        "session"  : "2021 - 2023"  
+      },
+      {
+          "course" : "BACHLORE IN COMPUTER APPLICATION",
+          "college" : "Patna Women's College",
+          "session"  : "2018 - 2021"  
+      },
+      {
+          "course" : " INTERMEDIATE",
+          "college" : " Kendriya Vidyalaya RAU, Pusa",
+          "session"  : "2018"  
+      },
+      {
+          "course" : "MATRICULATION",
+          "college" : "Campus Public School, Pusa",
+          "session"  : "2016"  
+      }
+  ]
 }
