@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './certificate.module.css'; 
 import webd from './../../assets/certificate/webd.png';
 import oci from './../../assets/certificate/oci.jpg';

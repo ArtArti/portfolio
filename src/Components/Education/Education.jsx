@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Education.module.css";
-import cursorIcon from './../../assets/about/cursorIcon.png'
+import cursorIcon from "./../../assets/about/cursorIcon.png";
 import { useTranslation } from "react-i18next";
 export default function Education() {
-  const { t } = useTranslation(); 
-  
-  const education = t('education', { returnObjects: true });
+  const { t } = useTranslation();
+
+  const education = t("education", { returnObjects: true });
   return (
     <>
       <section className={styles.container} id="education">

@@ -47,7 +47,7 @@
       },
       {
         "role": "Web Developer Intern",
-        "organisation": "Techprolabz: Schools of Robotics",
+        "organisation": " Techprolabz: Schools of Robotics",
         "startDate": "Apr, 2020",
         "endDate": "Jun, 2020",
         "experiences": ["Built a websites to uplifts the grocery shops"],
@@ -65,6 +65,7 @@
     "project":{
       "project":"MY PROJECTS",
       "all":"All",
+      
       "fontend":"FrontEnd",
       "backend":"Backend"
     },
