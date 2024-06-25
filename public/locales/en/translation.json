@@ -1,5 +1,5 @@
 {   "certificate":{
-     "certificate":"CERTIFICATION"
+     "certificate": "CERTIFICATION"
 },
     "header" :{
       "home" : "Home",
@@ -18,7 +18,7 @@
        "name":"Arti",
        "connect":"Connect",
        "cv":" Resume",
-       "intro": " I'm a full-stack developer with 1 years of professional experience using React and NodeJS. Reach out if you'd like to learn more!"
+       "intro":"I'm a full-stack developer with 1 years of professional experience using React and NodeJS. Reach out if you'd like to learn more!"
     },
     "about":{
       "frontend":"Frontend Developer",
@@ -65,7 +65,7 @@
     "project":{
       "project":"MY PROJECTS",
       "all":"All",
-      
+
       "fontend":"FrontEnd",
       "backend":"Backend"
     },
