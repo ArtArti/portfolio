@@ -16,7 +16,7 @@ export default function Education() {
               return (
                 <>
                   <li key={id} className={styles.aboutItem}>
-                    <img src={cursorIcon} alt="Cursor icon" />
+                    <img src={cursorIcon} alt="icon" />
                     <div className={styles.aboutItemText}>
                       <h3>{education.course}</h3>
                       <p>
