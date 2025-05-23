@@ -12,7 +12,7 @@ const projectsData = [
     image: "/project/art.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
-    previewUrl: "https://art-gallery-kappa-flax.vercel.app/",
+    previewUrl: "https://gallery-six-flame.vercel.app/",
   },
   {
     id: 2,
