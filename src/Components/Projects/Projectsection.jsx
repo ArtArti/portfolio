@@ -39,7 +39,7 @@ const projectsData = [
     image: "/project/news.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
-    previewUrl: "https://daily-buzz.vercel.app/",
+    previewUrl: "https://daily-buzz-wine.vercel.app/",
   },
 ];
 
