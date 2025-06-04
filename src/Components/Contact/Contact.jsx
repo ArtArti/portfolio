@@ -137,8 +137,8 @@ const Contact = () => {
               {t('contact.msg')}
             </label>
             <textarea
-              name="message"
-              id="message"
+              name="text"
+              id="text"
               type="text"
               className="bg-[#d2d4dc] border border-[#33353F] placeholder-[#141414] text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about..."
