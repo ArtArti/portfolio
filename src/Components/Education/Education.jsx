@@ -22,7 +22,7 @@ export default function Education() {
                       <p>
                         <span className=" text-sm text-slate-700 font-thin">
                           {education.college}
-                          <br />
+                          <br/>
                           {education.session}
                         </span>
                       </p>
