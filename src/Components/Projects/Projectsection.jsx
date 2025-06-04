@@ -12,6 +12,7 @@ const projectsData = [
     image: "/project/art.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
+<<<<<<< HEAD
     previewUrl: "https://art-gallery-client.vercel.app/",
   },
   {
@@ -39,7 +40,7 @@ const projectsData = [
     image: "/project/news.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
-    previewUrl: "https://daily-buzz.vercel.app/",
+    previewUrl: "https://daily-buzz-wine.vercel.app/",
   },
 ];
 
