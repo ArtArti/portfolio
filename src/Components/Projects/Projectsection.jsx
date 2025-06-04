@@ -12,7 +12,6 @@ const projectsData = [
     image: "/project/art.png",
     tag: ["All", "Frontend"],
     gitUrl: "/",
-<<<<<<< HEAD
     previewUrl: "https://art-gallery-client.vercel.app/",
   },
   {
