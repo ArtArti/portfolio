@@ -3,7 +3,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import { HiOutlineCodeBracket } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
   return (
     <div>
       <div

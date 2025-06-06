@@ -41,6 +41,15 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "https://daily-buzz-wine.vercel.app/",
   },
+  {
+    id: 5,
+    title: "Automation_Testing",
+    description: "Project 3 description",
+    image: "/project/WebDriver.png",
+    tag: ["All", "Testing"],
+    gitUrl: "https://github.com/ArtArti/selenium-testng-framework",
+    previewUrl: "/",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -83,6 +92,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Backend"
           isSelected={tag === "Backend"}
+        />
+         <ProjectTag
+          onClick={handleTagChange}
+          name="Testing"
+          isSelected={tag === "Testing"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
