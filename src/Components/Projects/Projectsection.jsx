@@ -44,10 +44,19 @@ const projectsData = [
   {
     id: 5,
     title: "Automation_Testing",
-    description: "Project 3 description",
+    description: "Project 5 description",
     image: "/project/WebDriver.png",
     tag: ["All", "Testing"],
     gitUrl: "https://github.com/ArtArti/selenium-testng-framework",
+    previewUrl: "/",
+  },
+  {
+    id: 6,
+    title: "Art_Gallery_Automation_Testing",
+    description: "Project 6 description",
+    image: "/project/WebDriver.png",
+    tag: ["All", "Testing"],
+    gitUrl: "https://github.com/ArtArti/Gallery_Client_Testing.git",
     previewUrl: "/",
   },
 ];
